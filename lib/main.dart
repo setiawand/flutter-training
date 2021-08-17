@@ -63,33 +63,68 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+      body: SafeArea(
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.network('https://assets.pikiran-rakyat.com/crop/233x4:2105x1079/x/photo/2020/09/08/2405490607.jpg'),
-            const Text(
-              'Hello saya sedang belajar Flutter',
+          children: [
+            Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.red[500]
+                  ),
+                  width: 100,
+                  height: 100,
+                  margin: EdgeInsets.all(10.0),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.yellow[500]
+                  ),
+                  width: 100,
+                  height: 100,
+                  margin: EdgeInsets.all(10.0),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.green[500]
+                  ),
+                  width: 100,
+                  height: 100,
+                  margin: EdgeInsets.all(10.0),
+                )
+              ],
             ),
-          ],
-        ),
-      ),
+            Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.green[500]
+                  ),
+                  width: 100,
+                  height: 100,
+                  margin: EdgeInsets.all(10.0),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.yellow[500]
+                  ),
+                  width: 100,
+                  height: 100,
+                  margin: EdgeInsets.all(10.0),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.red[500]
+                  ),
+                  width: 100,
+                  height: 100,
+                  margin: EdgeInsets.all(10.0),
+                )
+              ],
+            )
+          ]
+        )
+      )
     );
   }
 }
